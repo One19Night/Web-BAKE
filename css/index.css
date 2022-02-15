@@ -1,0 +1,30 @@
+/* HEADER */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    color: #212529;
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+.header img{
+width: 250px;
+}
+.header ul{
+    list-style: none;
+    background-color: black;
+    padding: 15px 0;
+}
+.header ul li{
+    display: inline;
+    margin: 0 5px;
+}
+.header ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    
+}
