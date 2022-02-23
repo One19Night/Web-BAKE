@@ -6,6 +6,7 @@
 }
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 body{
     color: #212529;
@@ -39,6 +40,9 @@ h2{
 header{
     background-color: #4e2a84;
     padding: 20px 0;
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
 }
 .header__content{
     width: 70%;
@@ -65,7 +69,7 @@ header{
     font-weight: 700;
     letter-spacing: 2px;
     transition-property: all;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-timing-function: linear;    
 }
 .header__content ul a:hover{
@@ -541,4 +545,93 @@ footer{
 }
 .footer_copyright span{
     color: #ff0e83;
+}
+/* BACK TO TOP */
+.backtotop{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    visibility: hidden;
+    opacity: 0;
+}
+.backtotop i{
+    height: 40px;
+    width: 40px;
+    line-height: 36px;
+    border: 2px solid #2cbeff;
+    text-align: center;
+    font-size: 2rem;
+    color: #2cbeff;
+    border-radius: 50%;
+}
+.cd-top--is-visible { 
+    visibility: visible;
+    opacity: 1;
+  }
+  /* TRANTISION */
+.team_item2{
+    overflow: hidden;
+}
+.team_item2 .team_details{
+    opacity: 1;
+    transform: translateX(-100%);
+}
+.team_item2:hover .team_details{
+    transform: translateX(0);
+}
+.team_item3{
+    overflow: hidden;
+}
+.team_item3 .team_details{
+    opacity: 1;
+    transform: translateY(100%);
+}
+.team_item3:hover .team_details{
+    transform: translateY(0);
+}
+.team_item4 .team_details{
+    transform: rotate(0deg);
+}
+.team_item4:hover .team_details{
+    transform: rotate(360deg);
+}
+.team_item5 .team_details{
+    transform: scale(0);
+}
+.team_item5:hover .team_details{
+    transform: scale(1);
+}
+.team_item6{
+    overflow: hidden;
+}
+.team_item6 .team_details{
+    transform: skewX(-90deg);
+}
+.team_item6:hover .team_details{
+    transform: skewX(0);
+}
+/* Khai báo chuổi chuyển động */
+@keyframes upDown{
+    0%{}
+    50%{
+        transform: translateY(25%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.banner button:hover{
+    animation: upDown 1s linear 0s infinite ;
+}
+@keyframes Zoom{
+    0%{}
+    50%{
+        transform: scale(90%);
+    }
+    100%{
+        transform: scale(110%);
+    }
+}
+.footer_item .footer_subsribe button:hover{
+    animation: Zoom 1s linear 0s infinite ;
 }
